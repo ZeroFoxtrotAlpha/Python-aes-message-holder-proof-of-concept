@@ -2,7 +2,7 @@ import pyAesCrypt
 import os
 
 
-var = str(input("\n\nIf creating an AES encrypted message to hold then type the number 1 and confirm with enter. (1) \nIf opening a stored message type the number 2 then confirm with enter. (2) \n\n"))
+var = str(input("\n\nIf creating an AES encrypted message to hold then type the number 1 and confirm with enter. (1) \nIf opening a stored message type the number 2 then confirm with enter. (2) \n\nInput here:  "))
 
 if var == "1":
     #cleanup base 
@@ -11,9 +11,9 @@ if var == "1":
         os.remove("data.txt.aes")
         
     #create password and file
-    password = str(input("\nWhat would you like to set as your encryption password? Press enter to confirm... \n\n"))
+    password = str(input("\nWhat would you like to set as your encryption password? Press enter to confirm... \n\nInput here:  "))
 
-    responce = str(input("\nPlease type your message below and press enter to confirm... \n\n"))
+    responce = str(input("\nPlease type your message below and press enter to confirm... \n\nInput here:  "))
 
     contents = str(responce)
 
@@ -32,7 +32,7 @@ if var == "1":
     print("\nDone! Please clear your terminal to avoid data retention.\n\n")
 elif var == "2":
     #gets key
-    password1 = str(input("\nPlease enter your password then press enter to confirm... \n\n"))
+    password1 = str(input("\nPlease enter your password then press enter to confirm... \n\nInput here:  "))
 
     # decrypt
     bufferSize = 128 * 1024
@@ -42,13 +42,13 @@ elif var == "2":
     os.remove("data.txt.aes")
 
     #confirm
-    print("\nDone! Your data is below: \n")
+    print("\nDone! Your data is below:\n")
 
     f = open('data.txt', 'r')
     decrypted_data = f.read()
-    print ("\n-------------- \n ")
+    print ("\n--------------\n")
     print (decrypted_data)
-    print ("\n--------------\n ")
+    print ("\n--------------\n\n")
     f.close()
 
     #purge data
