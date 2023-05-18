@@ -1,6 +1,7 @@
 import pyAesCrypt
 import os
 
+#prompt user input
 
 var = str(input("\n\nIf creating an AES encrypted message to hold then type the number 1 and confirm with enter. (1) \nIf opening a stored message type the number 2 then confirm with enter. (2) \n\nInput here:  "))
 
